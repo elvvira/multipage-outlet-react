@@ -1,5 +1,5 @@
-import { Ul } from '../footer/styles';
-import { StyledMenu } from './styles';
+import ButtonPink from '../button-pink/ButtonPink';
+import { StyledMenu, Ul } from './styles';
 
 const Menu = ({ open, setOpen }) => {
 	return (
@@ -14,7 +14,7 @@ const Menu = ({ open, setOpen }) => {
 				<li>
 					<a href=''>Contact</a>
 				</li>
-				<button>Schedule a Demo</button>
+				<ButtonPink />
 			</Ul>
 		</StyledMenu>
 	);

@@ -21,5 +21,6 @@ const Icons = styled.div`
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	text-align: center;
 `;
 export { StyledFooter, Nav, Icons, Ul };
