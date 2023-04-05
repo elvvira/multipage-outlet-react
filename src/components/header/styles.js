@@ -6,9 +6,10 @@ const StyledHeader = styled.div`
 	align-items: center;
 	padding: 2rem;
 	position: relative;
+	background: #f2f2f2;
 	justify-content: space-between;
 `;
 const IconMenu = styled.img`
-	z-index: 10;
+	z-index: 1000;
 `;
 export { StyledHeader, IconMenu };

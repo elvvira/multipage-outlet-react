@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ButtonPink from '../button-pink/ButtonPink';
 import { StyledMenu, Ul } from './styles';
 
@@ -6,13 +7,13 @@ const Menu = ({ open, setOpen }) => {
 		<StyledMenu open={open}>
 			<Ul>
 				<li>
-					<a href=''>Pricing</a>
+					<Link to='/pricing'>Pricing</Link>
 				</li>
 				<li>
-					<a href=''>About</a>
+					<Link to=''>About</Link>
 				</li>
 				<li>
-					<a href=''>Contact</a>
+					<Link to=''>Contact</Link>
 				</li>
 				<ButtonPink />
 			</Ul>

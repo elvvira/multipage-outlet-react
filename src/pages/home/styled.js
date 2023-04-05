@@ -1,16 +1,24 @@
 import styled from 'styled-components';
 import { COLORS } from '../../constants/colors';
-const { primary, secondary } = COLORS;
+const { mirageBlue } = COLORS;
 
+const BgImg = styled.img`
+	position: absolute;
+	top: -600px;
+	z-index: 0;
+`;
 const HomeContainer = styled.div`
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background: #f2f2f2;
+	padding-bottom: 2rem;
 `;
 const ImgPhone = styled.img`
 	width: 200px;
+	z-index: 10;
 `;
 const ContainerMobile = styled.div`
 	display: flex;
@@ -33,7 +41,7 @@ const Input = styled.input`
 `;
 
 const ContainerWork = styled.div`
-	background: ${secondary.mirageBlue};
+	background: ${mirageBlue};
 	color: white;
 	padding: 2rem;
 	text-align: center;
@@ -46,6 +54,7 @@ const ContainerEasy = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: 3rem;
 `;
 
 export {
@@ -55,5 +64,6 @@ export {
 	Input,
 	ContainerWork,
 	ImgEasy,
-	ContainerEasy
+	ContainerEasy,
+	BgImg
 };

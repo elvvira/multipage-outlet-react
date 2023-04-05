@@ -1,10 +1,13 @@
-import TitleBig from '../../title-big/TitleBig';
-import ButtonTransparent from '../button-transparent/ButtonTransparent';
-import EmailForm from '../email-form/EmailForm';
-import Logos from '../logos/Logos';
+import { CardHomeInfo } from '../../constants/info';
+import Title from '../../components/title/Title';
+import ButtonTransparent from '../../components/button-transparent/ButtonTransparent';
+import CardHome from '../../components/cards-home/CardHome';
+import EmailForm from '../../components/email-form/EmailForm';
+import Logos from '../../components/logos/Logos';
 
-import TitleText from '../title-text/TitleText';
+import TitleText from '../../components/title-text/TitleText';
 import {
+	BgImg,
 	ContainerEasy,
 	ContainerMobile,
 	ContainerWork,
@@ -13,20 +16,24 @@ import {
 	ImgPhone
 } from './styled';
 
+import { COLORS } from '../../constants/colors';
+
 const Home = () => {
 	return (
 		<HomeContainer>
+			<BgImg src='public/assets/shared/desktop/bg-pattern-circle.svg' alt='' />
 			<ContainerMobile>
 				<ImgPhone
 					src='public/assets/home/desktop/illustration-phone-mockup.svg'
 					alt=''
 				/>
 				<div>
-					<TitleBig
+					<Title
+						main
 						title={'Start building with our APIs for absolutely free.'}
 					/>
 
-					<EmailForm></EmailForm>
+					<EmailForm />
 					<p>Have any questions? Contact Us</p>
 				</div>
 			</ContainerMobile>
@@ -42,7 +49,7 @@ const Home = () => {
 						}
 					/>
 
-					<ButtonTransparent text={'About Us'} />
+					<ButtonTransparent color={'white'} text={'About Us'} />
 				</div>
 			</ContainerWork>
 			<ContainerEasy>
@@ -51,8 +58,8 @@ const Home = () => {
 					alt=''
 				/>
 				<TitleText
-					colorTitle={'#36536b'}
-					colorText={' #6c8294'}
+					colorTitle={COLORS.sanJuanBlue}
+					colorText={COLORS.lightSanJuanBlue}
 					title={'Easy to implement'}
 					info={
 						'Our API comes with just a few lines of code. You’ll be up and running in no time. We built our documentation page to integrate payments functionality with ease.'
@@ -65,8 +72,8 @@ const Home = () => {
 					alt=''
 				/>
 				<TitleText
-					colorTitle={'#36536b'}
-					colorText={' #6c8294'}
+					colorTitle={COLORS.sanJuanBlue}
+					colorText={COLORS.lightSanJuanBlue}
 					title={'Simple UI & UX'}
 					info={
 						'Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion. '
@@ -74,8 +81,12 @@ const Home = () => {
 				/>
 			</ContainerEasy>
 
+			{CardHomeInfo.map(card => {
+				return <CardHome key={card.id} {...card}></CardHome>;
+			})}
+
 			<div>
-				<TitleBig title={'Ready to start?'}></TitleBig>
+				<Title title={'Ready to start?'} />
 				<EmailForm></EmailForm>
 			</div>
 		</HomeContainer>
