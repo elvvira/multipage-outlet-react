@@ -3,6 +3,8 @@ import ButtonTransparent from '../button-transparent/ButtonTransparent';
 import {
 	ContainerPlans,
 	Feature,
+	FeatureImg,
+	FeaturesName,
 	StyledPrice,
 	StylePriceInfo,
 	TitlePrice
@@ -21,8 +23,12 @@ const PricingCard = ({ plan, price, features }) => {
 				{features.map(card => {
 					return (
 						<Feature key={card.id}>
-							<img src='public/assets/shared/desktop/icon-check.svg' alt='' />
-							<p>{card.name}</p>
+							<FeatureImg
+								value={card.value}
+								src='public/assets/shared/desktop/icon-check.svg'
+								alt=''
+							/>
+							<FeaturesName value={card.value}>{card.name}</FeaturesName>
 						</Feature>
 					);
 				})}

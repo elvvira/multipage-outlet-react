@@ -26,9 +26,20 @@ const StylePriceInfo = styled.p`
 	color: #6c8294;
 `;
 const Feature = styled.div`
+	width: 100px;
 	display: flex;
 	align-items: center;
+	font-size: 0.7rem;
 	gap: 1rem;
+`;
+
+const FeaturesName = styled.p`
+	color: ${({ value }) => (value ? 'black' : 'gray')};
+	position: relative;
+	right: ${({ value }) => (value ? '0px' : '-30px')};
+`;
+const FeatureImg = styled.img`
+	display: ${({ value }) => (value ? 'block' : 'none')};
 `;
 const ContainerPlans = styled.div`
 	position: relative;
@@ -57,4 +68,12 @@ const ContainerPlans = styled.div`
 	}
 `;
 
-export { ContainerPlans, StyledPrice, StylePriceInfo, TitlePrice, Feature };
+export {
+	ContainerPlans,
+	StyledPrice,
+	StylePriceInfo,
+	TitlePrice,
+	Feature,
+	FeaturesName,
+	FeatureImg
+};
